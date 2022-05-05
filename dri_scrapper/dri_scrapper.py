@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 def fib(n: int) -> int:
     if n < 2:
         return n

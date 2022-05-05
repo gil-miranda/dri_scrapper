@@ -30,7 +30,7 @@ check_installed_python:
 	$(eval REQUIRED := $(shell [ -f $(CONFIG_FILE) ] && cat $(CONFIG_FILE) | grep -w $(CONFIG_KEY_NAME) | cut -f2 -d "="))
 
 	@if [ -z "$(REQUIRED)" ] | [ $(shell echo -n "$(REQUIRED)" | wc -c ) -lt 3 ]; then \
-		echo "Missing configurarion file or key"; \
+		echo "Missing configurarigon file or key"; \
 		return 1; \
 	fi
 
@@ -58,7 +58,7 @@ requirements: pip-compile check_installed_python
 
 ## Synchronize the Python Dependencies & Virtual Env
 sync-env: pip-compile
-	pip-sync requirements.txt requirements-dev.txt
+	pip-sync requirements.txt
 
 #################################################################################
 

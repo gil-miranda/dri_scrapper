@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dri_scrapper.dri_scrapper import fib
 
 
